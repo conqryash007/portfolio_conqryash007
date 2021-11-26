@@ -1,28 +1,27 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Switch,
-} from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Home from "./components";
+import Resume from "./components/Resume";
+import Navbar from "./components/Navbar";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
 
-import Users from "./users/pages/Users";
-import NewPlace from "./places/pages/NewPlace";
+import "./App.css";
 
-const App = () => {
+function App() {
   return (
-    <Router>
+    <React.Fragment>
+      <CssBaseline />
+      <Navbar />
       <Switch>
-        <Route path="/" exact>
-          <Users />
-        </Route>
-        <Route path="/places/new" exact>
-          <NewPlace />
-        </Route>
-        <Redirect to="/" />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/resume" component={Resume} />
+        <Route exact path="/portfolio" component={Portfolio} />
+        <Route exact path="/contact" component={Contact} />
       </Switch>
-    </Router>
+    </React.Fragment>
   );
-};
+}
 
 export default App;
