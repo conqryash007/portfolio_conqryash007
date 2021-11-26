@@ -18,14 +18,14 @@ const Particles = () => {
       params={{
         particles: {
           number: {
-            value: 45,
+            value: 70,
             density: {
               enable: true,
               value_area: 600,
             },
           },
           shape: {
-            type: "circle",
+            type: "square",
             stroke: {
               width: 1,
               color: "tomato",
