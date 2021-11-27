@@ -11,12 +11,11 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Typed from "react-typed";
 
-import project1 from "../images/html-css-javascript-lg.jpg";
-import project2 from "../images/html-css-javascript.jpg";
-import project3 from "../images/javascript-fullstack.jpg";
-
-import project5 from "../images/react-redux.jpg";
-import project6 from "../images/react.png";
+import fund4cause from "./../img/project_snaps/fund4cause.png";
+import glassyVault from "./../img/project_snaps/glassyVault.png";
+import it from "./../img/project_snaps/it.png";
+import lottery from "./../img/project_snaps/lottery.png";
+import roverProject from "./../img/project_snaps/roverProject.png";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -28,8 +27,15 @@ const useStyles = makeStyles((theme) => ({
     margin: "3rem auto",
     height: "350px",
     overflow: "auto",
-    backgroundColor: "rgb(72, 42, 92)",
+    backgroundColor: "rgb(179, 23, 67)",
     color: "white",
+    padding: "10px",
+    boxShadow: "rgba(255, 252, 255) 1.95px 1.95px 4px",
+    transition: "0.3s",
+    "&:hover": {
+      transform: "scale(1.05)",
+      boxShadow: "rgba(255, 252, 255,0.5) 1.95px 1.95px 4px",
+    },
   },
   heading: {
     paddingTop: "20px",
@@ -42,19 +48,19 @@ const projects = [
     name: "IT Branch Website",
     description: `This is a website for the IT branch of IIIT BBSR.
     It enables student to login and signup and has features like viewing timetable, student details, creating and reacting to polls, notice board, a to-do list, user-dashboard etc.`,
-    image: project1,
+    image: it,
     gtb_url: "https://github.com/gsk-007/Tech-Attack",
   },
   {
     name: "fund4cause",
     description: `A decentralised app for funding projects and technology around the world `,
-    image: project2,
+    image: fund4cause,
     gtb_url: "https://github.com/conqryash007/fund4cause",
   },
   {
     name: "👨‍🚀Rover_Project👨‍🚀",
     description: `This project lets the user to get images from the different mars rovers send by NASA . `,
-    image: project3,
+    image: roverProject,
     gtb_url: "https://github.com/conqryash007/Rover_Project",
   },
 
@@ -62,12 +68,12 @@ const projects = [
     name: "Glassy Vault Dapp",
     description: `The Glassy Vault Dapp ideate upon the increasing use of fraudulent certificates due to conventional means of storing and verification of degrees/educational papers/caste certificates etc.
     This project aims to provide a way to securely store the results of 10th and 12th board exams of different schools using next gen technology i.e blockchain. The smart contract build on the Ethereum network can surely be a effective way to tackle the above problem and can easily be extended to store more such documents.`,
-    image: project5,
+    image: glassyVault,
   },
   {
     name: "Lottery Dapp",
     description: `A decentralized App for staking ether over a game which randomly generates winner and transfers the staked money of all partcipants to the winners wallet.`,
-    image: project6,
+    image: lottery,
   },
 ];
 
