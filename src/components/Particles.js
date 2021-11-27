@@ -51,6 +51,14 @@ const Particles = () => {
               sync: false,
             },
           },
+          interactivity: {
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse",
+              },
+            },
+          },
         },
       }}
     />

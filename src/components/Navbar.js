@@ -17,8 +17,10 @@ import AssignmentInd from "@material-ui/icons/AssignmentInd";
 import Home from "@material-ui/icons/Home";
 import Apps from "@material-ui/icons/Apps";
 import ContactMail from "@material-ui/icons/ContactMail";
+import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
+import Close from "@material-ui/icons/CloseRounded";
 import avt from "./../avt.jpeg";
 
 import Footer from "../components/Footer";
@@ -68,6 +70,12 @@ const Navbar = () => {
       <Avatar className={classes.avatar} src={avt} alt="Yash Gupta" />
       <Divider />
       <List>
+        <Button
+          style={{ color: "white", textAlign: "center" }}
+          onClick={() => setOpen(false)}
+        >
+          {<Close />} CLOSE {<Close />}
+        </Button>
         {menuItems.map((item, i) => (
           <ListItem
             button

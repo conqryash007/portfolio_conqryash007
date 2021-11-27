@@ -14,7 +14,7 @@ import Typed from "react-typed";
 import project1 from "../images/html-css-javascript-lg.jpg";
 import project2 from "../images/html-css-javascript.jpg";
 import project3 from "../images/javascript-fullstack.jpg";
-import project4 from "../images/mern-stack.jpg";
+
 import project5 from "../images/react-redux.jpg";
 import project6 from "../images/react.png";
 
@@ -26,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
   cardContainer: {
     maxWidth: 345,
     margin: "3rem auto",
+    height: "350px",
+    overflow: "auto",
+    backgroundColor: "rgb(72, 42, 92)",
+    color: "white",
   },
   heading: {
     paddingTop: "20px",
@@ -35,51 +39,34 @@ const useStyles = makeStyles((theme) => ({
 
 const projects = [
   {
-    name: "Project 1",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
-    consequatur magni quod nesciunt necessitatibus molestiae non
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus
-    iste alias sunt veritatis nisi dolores!`,
+    name: "IT Branch Website",
+    description: `This is a website for the IT branch of IIIT BBSR.
+    It enables student to login and signup and has features like viewing timetable, student details, creating and reacting to polls, notice board, a to-do list, user-dashboard etc.`,
     image: project1,
+    gtb_url: "https://github.com/gsk-007/Tech-Attack",
   },
   {
-    name: "Project 2",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    name: "fund4cause",
+    description: `A decentralised app for funding projects and technology around the world `,
     image: project2,
+    gtb_url: "https://github.com/conqryash007/fund4cause",
   },
   {
-    name: "Project 3",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    name: "👨‍🚀Rover_Project👨‍🚀",
+    description: `This project lets the user to get images from the different mars rovers send by NASA . `,
     image: project3,
+    gtb_url: "https://github.com/conqryash007/Rover_Project",
   },
+
   {
-    name: "Project 4",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
-    image: project4,
-  },
-  {
-    name: "Project 5",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    name: "Glassy Vault Dapp",
+    description: `The Glassy Vault Dapp ideate upon the increasing use of fraudulent certificates due to conventional means of storing and verification of degrees/educational papers/caste certificates etc.
+    This project aims to provide a way to securely store the results of 10th and 12th board exams of different schools using next gen technology i.e blockchain. The smart contract build on the Ethereum network can surely be a effective way to tackle the above problem and can easily be extended to store more such documents.`,
     image: project5,
   },
   {
-    name: "Project 6",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    name: "Lottery Dapp",
+    description: `A decentralized App for staking ether over a game which randomly generates winner and transfers the staked money of all partcipants to the winners wallet.`,
     image: project6,
   },
 ];
@@ -107,17 +94,14 @@ const Portfolio = () => {
                   <Typography variant="h5" gutterBottom>
                     {project.name}
                   </Typography>
-                  <Typography variant="body2" color="textSecondary">
+                  <Typography variant="body2" color="white">
                     {project.description}
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary">
-                  Share
-                </Button>
-                <Button size="small" color="primary">
-                  Live Demo
+                <Button href={project.gtb_url} size="small" color="primary">
+                  Checkout Project
                 </Button>
               </CardActions>
             </Card>

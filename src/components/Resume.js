@@ -1,238 +1,137 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Typed from "react-typed";
 import Box from "@material-ui/core/Box";
 
+import Typography from "@material-ui/core/Typography";
+import Typed from "react-typed";
+import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
+import Avatar from "@material-ui/core/Avatar";
+import IconButton from "@material-ui/core/IconButton";
+import Download from "@material-ui/icons/ArrowDownward";
+import avt from "./../avt.jpeg";
+
+import pdf from "./../public/Resume.pdf";
+
 const useStyles = makeStyles((theme) => ({
-  mainContainer: {
-    background: "rgb(31, 29, 29)",
+  contactContainer: {
+    color: "tomato",
   },
-  timeLine: {
-    position: "relative",
-    padding: "1rem",
-    margin: "o auto",
-    "&:before": {
-      content: "''",
-      position: "absolute",
-      height: "100%",
-      border: "1px solid tan",
-      right: "40px",
-      top: 0,
-    },
-    "&:after": {
-      content: "''",
-      display: "table",
-      clear: "both",
-    },
-    [theme.breakpoints.up("md")]: {
-      padding: "2rem",
-      "&:before": {
-        left: "calc(50% - 1px)",
-        right: "auto",
-      },
-    },
+  avatar: {
+    height: "200px",
+    width: "200px",
   },
-  timeLineItem: {
-    padding: "1rem",
-    borderBottom: "2px solid tan",
-    position: "relative",
-    margin: "1rem 3rem 1rem 1rem",
-    clear: "both",
-    "&:after": {
-      content: "''",
-      position: "absolute",
-    },
-    "&:before": {
-      content: "''",
-      position: "absolute",
-      right: "-0.625rem",
-      top: "calc(50% - 5px)",
-      borderStyle: "solid",
-      borderColor: "tomato tomato transparent transparent",
-      borderWidth: "0.625rem",
-      transform: "rotate(45deg)",
-    },
-    [theme.breakpoints.up("md")]: {
-      width: "44%",
-      margin: "1rem",
-      "&:nth-of-type(2n)": {
-        float: "right",
-        margin: "1rem",
-        borderColor: "tan",
-      },
-      "&:nth-of-type(2n):before": {
-        right: "auto",
-        left: "-0.625rem",
-        borderColor: "transparent transparent tomato tomato",
-      },
-    },
-  },
-  timeLineYear: {
-    textAlign: "center",
-    maxWidth: "9.375rem",
-    margin: "0 3rem 0 auto",
-    fontSize: "1.8rem",
-    color: "#fff",
-    background: "tomato",
-    lineHeight: 1,
-    padding: "0.5rem 1rem",
-    "&:before": {
-      display: "none",
-    },
-    [theme.breakpoints.up("md")]: {
-      textAlign: "center",
-      margin: "0 auto",
-      "&:nth-of-type(2n)": {
-        float: "none",
-        margin: "0 auto",
-      },
-      "&:nth-of-type(2n):before": {
-        display: "none",
-      },
-    },
+  inner: {
+    padding: "50px",
   },
   heading: {
-    color: "tomato",
-    padding: "3rem 0",
-    textTransform: "uppercase",
+    textShadow: "3px 3px 4px #ff0000",
   },
-  subHeading: {
-    color: "#fff",
-    padding: 0,
-    textTransform: "uppercase",
+  intro: {
+    maxWidth: "400px",
   },
-  body1: {
-    color: "tomato",
+  btn: {
+    marginTop: "10px",
+    color: "pink",
   },
-  subtitle1: {
-    color: "tan",
+  bx: {
+    textAlign: "center",
+    boxShadow: "2px 10px 20px 2px  rgb(153, 35, 78)",
+    padding: "10px",
   },
 }));
 
-const Resume = () => {
+const Contact = () => {
   const classes = useStyles();
   return (
-    <Box component="header" className={classes.mainContainer}>
-      <Typography className={classes.heading} align="center" variant="h4">
-        <Typed strings={["RESUME"]} typeSpeed={40} />
-      </Typography>
-      <Box component="div" className={classes.timeLine}>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2013
-        </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
+    <Box component="div" className={classes.contactContainer}>
+      <Grid container justify="center">
+        <Box>
+          <div>
+            <Typography className={classes.heading} align="center" variant="h4">
+              <Typed strings={["RESUME"]} typeSpeed={40} />
+            </Typography>
+          </div>
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            className={classes.inner}
           >
-            web design
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
-          </Typography>
+            <div className={classes.bx}>
+              <Avatar className={classes.avatar} src={avt} alt="Yash Gupta" />
+              <a href={pdf} download>
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  className={classes.btn}
+                >
+                  <IconButton style={{ height: "30px" }}>
+                    <Download />
+                  </IconButton>
+                  Download
+                </Button>
+              </a>
+              <br />
+              <a
+                href="https://drive.google.com/file/d/1Z9Nv4pFUFHSO-qJPkhn1l83738CZY3fh/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  color="primary"
+                  variant="contained"
+                  className={classes.btn}
+                >
+                  <IconButton style={{ height: "30px" }}>
+                    <Download />
+                  </IconButton>
+                  View Resume
+                </Button>
+              </a>
+            </div>
+            <div
+              style={{
+                margin: "15px",
+                textAlign: "center",
+                color: "rgb(159, 75, 204)",
+              }}
+            >
+              <Typography
+                style={{
+                  color: "rgb(255, 75, 204)",
+                  textShadow: "3px 3px 4px #ff0000",
+                }}
+                variant="h4"
+              >
+                <Typed strings={["Yash Gupta"]} typeSpeed={40} />
+              </Typography>
+              <Typography
+                className={classes.heading}
+                align="inherit"
+                variant="h4"
+              >
+                <Typed strings={["IIIT BBSR"]} typeSpeed={40} />
+              </Typography>
+              <Typography
+                className={classes.intro}
+                align="inherit"
+                variant="h6"
+                style={{ color: "rgb(182, 132, 207)" }}
+              >
+                <Typed
+                  strings={[
+                    "I love problem solving and cherished being around technology.I’m familiar with a variety of programming languages, including JavaScript, Solidity, C, C++ with hands on Reactjs, MongoDB and other web technologies but I’m always adding new skills to my repertoire.",
+                  ]}
+                  typeSpeed={1}
+                />
+              </Typography>
+            </div>
+          </Grid>
         </Box>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2014
-        </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
-          >
-            html & css
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
-          </Typography>
-        </Box>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2015
-        </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
-          >
-            Fullstack Javascript
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
-          </Typography>
-        </Box>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2017
-        </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
-          >
-            Django & React
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
-          </Typography>
-        </Box>
-      </Box>
+      </Grid>
     </Box>
   );
 };
 
-export default Resume;
+export default Contact;
