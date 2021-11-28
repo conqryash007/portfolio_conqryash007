@@ -37,9 +37,6 @@ const useStyles = makeStyles((theme) => ({
     color: "tomato",
     borderColor: "tan",
   },
-  field: {
-    margin: "1rem 0rem",
-  },
   imgIco: {
     "&:hover": {
       transform: "scale(1.1)",
@@ -79,7 +76,11 @@ const Contact = () => {
   return (
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
-        <Box component="form" className={classes.form}>
+        <form
+          action="mailto:guptayash200010@gmail.com"
+          method="post"
+          className={classes.form}
+        >
           <div>
             <Typography className={classes.heading} align="center" variant="h4">
               <Typed strings={["Contact me"]} typeSpeed={40} />
@@ -90,14 +91,9 @@ const Contact = () => {
               variant="outlined"
               inputProps={{ className: classes.input }}
             />
+
             <InputField
-              fullWidth={true}
-              label="Email"
-              variant="outlined"
-              inputProps={{ className: classes.input }}
-              className={classes.field}
-            />
-            <InputField
+              style={{ marginTop: "1rem" }}
               fullWidth={true}
               label="Message"
               variant="outlined"
@@ -110,6 +106,9 @@ const Contact = () => {
               fullWidth={true}
               endIcon={<Send />}
               className={classes.button}
+              target="_top"
+              rel="noopener noreferrer"
+              href={`mailto:guptayash200010@gmail.com`}
             >
               Contact Me
             </Button>
@@ -152,7 +151,7 @@ const Contact = () => {
               </a>
             </Grid>
           </Box>
-        </Box>
+        </form>
       </Grid>
     </Box>
   );
