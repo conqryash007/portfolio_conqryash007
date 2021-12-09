@@ -121,7 +121,7 @@ const Contact = () => {
               >
                 <Typed
                   strings={[
-                    "I love problem solving and cherished being around technology.I’m familiar with a variety of programming languages, including JavaScript, Solidity, C, C++ with hands on Reactjs, MongoDB and other web technologies but I’m always adding new skills to my repertoire.",
+                    "I love problem solving and cherish being around technology.I’m familiar with a variety of programming languages, including JavaScript, Solidity, C, C++ with hands on Reactjs, MongoDB and other web technologies but I’m always adding new skills to my repertoire.",
                   ]}
                   typeSpeed={1}
                 />
