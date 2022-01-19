@@ -22,6 +22,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import Close from "@material-ui/icons/CloseRounded";
 import avt from "./../avt.jpeg";
+import { useMediaQuery, useTheme } from "@material-ui/core";
 
 import Footer from "../components/Footer";
 
@@ -61,6 +62,8 @@ const menuItems = [
 ];
 
 const Navbar = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [open, setOpen] = useState(false);
 
   const classes = useStyles();
@@ -100,12 +103,29 @@ const Navbar = () => {
       <Box component="nav">
         <AppBar position="static" className={classes.appbar}>
           <Toolbar>
-            <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon className={classes.arrow} />
-            </IconButton>
+            {isMobile ? (
+              <IconButton onClick={() => setOpen(true)}>
+                <MenuIcon className={classes.arrow} />
+              </IconButton>
+            ) : null}
             <Typography className={classes.title} variant="h4">
               <Typed strings={["PORTFOLIO"]} typeSpeed={40} />
             </Typography>
+            {isMobile ? null : (
+              <>
+                {menuItems.map((item, i) => {
+                  return (
+                    <a
+                      key={item.listText}
+                      className="btn-shine"
+                      href={item.listPath}
+                    >
+                      {item.listText}
+                    </a>
+                  );
+                })}
+              </>
+            )}
           </Toolbar>
         </AppBar>
       </Box>

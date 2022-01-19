@@ -7,6 +7,8 @@ import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import avt from "../4.png";
 
+import "./head.css";
+
 const useStyles = makeStyles((theme) => ({
   avatar: {
     width: theme.spacing(30),
