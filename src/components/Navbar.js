@@ -21,7 +21,7 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import Close from "@material-ui/icons/CloseRounded";
-import avt from "./../avt.jpeg";
+import avt from "./../avt.webp";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 
 import Footer from "../components/Footer";

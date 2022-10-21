@@ -7,11 +7,11 @@ import Typed from "react-typed";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
 import Download from "@material-ui/icons/ArrowDownward";
-import avt from "./../avt.jpeg";
+import avt from "./../avt.webp";
 
 import pdf from "./../public/Resume.pdf";
+import "./../App.css";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
@@ -66,15 +66,13 @@ const Contact = () => {
                   variant="contained"
                   className={classes.btn}
                 >
-                  <IconButton style={{ height: "30px" }}>
-                    <Download />
-                  </IconButton>
+                  <Download />
                   Download
                 </Button>
               </a>
               <br />
               <a
-                href="https://drive.google.com/file/d/1CUhrEPBBU2hKSkMw0m-m9WLKFZxiFDlL/view?usp=sharing"
+                href="https://drive.google.com/file/d/15nDAF4_KVp0yK0IW586V23vabduLjV9u/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -83,9 +81,7 @@ const Contact = () => {
                   variant="contained"
                   className={classes.btn}
                 >
-                  <IconButton style={{ height: "30px" }}>
-                    <Download />
-                  </IconButton>
+                  <Download />
                   View Resume
                 </Button>
               </a>

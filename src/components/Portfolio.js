@@ -11,13 +11,14 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Typed from "react-typed";
 
-import fund4cause from "./../img/project_snaps/fund4cause.png";
-import glassyVault from "./../img/project_snaps/glassyVault.png";
-import it from "./../img/project_snaps/it.png";
-import lottery from "./../img/project_snaps/lottery.png";
-import roverProject from "./../img/project_snaps/roverProject.png";
-import retraview from "./../img/project_snaps/retraview.png";
-import freshit from "./../img/project_snaps/freshit.png";
+import fund4cause from "./../img/project_snaps/fund4cause.webp";
+import glassyVault from "./../img/project_snaps/glassyVault.webp";
+import it from "./../img/project_snaps/it.webp";
+import lottery from "./../img/project_snaps/lottery.webp";
+import roverProject from "./../img/project_snaps/roverProject.webp";
+import retraview from "./../img/project_snaps/retraview.webp";
+import freshit from "./../img/project_snaps/freshit.webp";
+import krypt from "./../img/project_snaps/krypt.webp";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -47,6 +48,25 @@ const useStyles = makeStyles((theme) => ({
 
 const projects = [
   {
+    name: "NFT-KryptoZombie",
+    description: `NFT-KryptoZombie is a collection of pixelated zombies. By paying a tiny gas fee, platform users can gain ownership of each KryptoZombie in the collection. All ownership details are stored on the Ethereum blockchain, and the smart contract adheres to the professional ERC721 standards.`,
+    image: krypt,
+    gtb_url: "https://github.com/conqryash007/NFT-KryptoZombie-Mint",
+  },
+  {
+    name: "fund4cause",
+    description: `A decentralised app for funding projects and technology around the world `,
+    image: fund4cause,
+    gtb_url: "https://github.com/conqryash007/fund4cause",
+  },
+  {
+    name: "Glassy Vault Dapp",
+    description: `The Glassy Vault Dapp ideate upon the increasing use of fraudulent certificates due to conventional means of storing and verification of degrees/educational papers/caste certificates etc.
+    This project aims to provide a way to securely store the results of 10th and 12th board exams of different schools using next gen technology i.e blockchain. The smart contract build on the Ethereum network can surely be a effective way to tackle the above problem and can easily be extended to store more such documents.`,
+    image: glassyVault,
+    gtb_url: "https://github.com/conqryash007/Glassy_Vault_Dapp",
+  },
+  {
     name: "reTRAView",
     description: `reTRAView is a full-stack MERN site for travelers and guide to list their visited a places and add location and description for other viewers and travelers.`,
     image: retraview,
@@ -59,12 +79,7 @@ const projects = [
     image: it,
     gtb_url: "https://github.com/gsk-007/Tech-Attack",
   },
-  {
-    name: "fund4cause",
-    description: `A decentralised app for funding projects and technology around the world `,
-    image: fund4cause,
-    gtb_url: "https://github.com/conqryash007/fund4cause",
-  },
+
   {
     name: "👨‍🚀Rover_Project👨‍🚀",
     description: `This project lets the user to get images from the different mars rovers send by NASA . `,
@@ -72,13 +87,6 @@ const projects = [
     gtb_url: "https://github.com/conqryash007/Rover_Project",
   },
 
-  {
-    name: "Glassy Vault Dapp",
-    description: `The Glassy Vault Dapp ideate upon the increasing use of fraudulent certificates due to conventional means of storing and verification of degrees/educational papers/caste certificates etc.
-    This project aims to provide a way to securely store the results of 10th and 12th board exams of different schools using next gen technology i.e blockchain. The smart contract build on the Ethereum network can surely be a effective way to tackle the above problem and can easily be extended to store more such documents.`,
-    image: glassyVault,
-    gtb_url: "https://github.com/conqryash007/Glassy_Vault_Dapp",
-  },
   {
     name: "FRESHERS WEBSITE",
     description: `A website for freshers to get guidance from their seniors.`,

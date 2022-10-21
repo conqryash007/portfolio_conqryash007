@@ -6,14 +6,13 @@ import Typography from "@material-ui/core/Typography";
 import Typed from "react-typed";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
-
 import Send from "@material-ui/icons/Send";
 
-import ltico from "./../img/ltico.png";
-import ghico from "./../img/ghico.png";
-import liicon from "./../img/liicon.png";
-import instico from "./../img/instico.png";
-import twitter from "./../img/twitter.png";
+import ltico from "./../img/ltico.webp";
+import ghico from "./../img/ghico.webp";
+import liicon from "./../img/liicon.webp";
+import instico from "./../img/instico.webp";
+import twitter from "./../img/twitter.webp";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {

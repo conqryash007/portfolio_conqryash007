@@ -5,9 +5,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
-import avt from "../4.png";
-
-import "./head.css";
+import avt from "../4.webp";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
